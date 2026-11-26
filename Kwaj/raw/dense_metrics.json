@@ -1,0 +1,78 @@
+{
+  "points": 177191,
+  "pairs": [
+    {
+      "pair": 0,
+      "images": [
+        "KWAJ_CORSAIR_230427-500.jpg",
+        "KWAJ_CORSAIR_230427-501.jpg"
+      ],
+      "points": 164,
+      "status": "ok"
+    },
+    {
+      "pair": 2,
+      "images": [
+        "KWAJ_CORSAIR_230427-502.jpg",
+        "KWAJ_CORSAIR_230427-503.jpg"
+      ],
+      "points": 23139,
+      "status": "ok"
+    },
+    {
+      "pair": 5,
+      "images": [
+        "KWAJ_CORSAIR_230427-505.jpg",
+        "KWAJ_CORSAIR_230427-506.jpg"
+      ],
+      "points": 25162,
+      "status": "ok"
+    },
+    {
+      "pair": 7,
+      "images": [
+        "KWAJ_CORSAIR_230427-507.jpg",
+        "KWAJ_CORSAIR_230427-508.jpg"
+      ],
+      "points": 34131,
+      "status": "ok"
+    },
+    {
+      "pair": 10,
+      "images": [
+        "KWAJ_CORSAIR_230427-510.jpg",
+        "KWAJ_CORSAIR_230427-511.jpg"
+      ],
+      "points": 49992,
+      "status": "ok"
+    },
+    {
+      "pair": 12,
+      "images": [
+        "KWAJ_CORSAIR_230427-512.jpg",
+        "KWAJ_CORSAIR_230427-513.jpg"
+      ],
+      "points": 0,
+      "status": "ok"
+    },
+    {
+      "pair": 15,
+      "images": [
+        "KWAJ_CORSAIR_230427-515.jpg",
+        "KWAJ_CORSAIR_230427-516.jpg"
+      ],
+      "points": 22767,
+      "status": "ok"
+    },
+    {
+      "pair": 18,
+      "images": [
+        "KWAJ_CORSAIR_230427-518.jpg",
+        "KWAJ_CORSAIR_230427-519.jpg"
+      ],
+      "points": 21836,
+      "status": "ok"
+    }
+  ],
+  "note": "Pairwise stereo, arbitrary scale, estimated pinhole calibration; not multiview-fused or ground-truth validated."
+}

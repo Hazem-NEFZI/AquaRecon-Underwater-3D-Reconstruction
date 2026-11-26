@@ -1,0 +1,280 @@
+{
+  "scene": "Kwaj",
+  "variant": "raw",
+  "input_images": 20,
+  "fingerprint": "aa4770aad698d56cc524cc6e67ebe6edbb6757412f532192aab0779a5d697a58",
+  "config": {
+    "variant": "raw",
+    "inputs": [
+      {
+        "name": "KWAJ_CORSAIR_230427-500.jpg",
+        "sha256": "0dc0b84b844767879e85e1a216b1f4eee0f6537f15b9ce89737fb3fcbcce74d5"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-501.jpg",
+        "sha256": "ae9ba3b38c23dffe51d186eb7dee38910ea34dcbee2acacac61a67e07f60e726"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-502.jpg",
+        "sha256": "fd998a608090ebe720536852f3e6324f52bc1c7c53adc6c5e7214293298c7c06"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-503.jpg",
+        "sha256": "8d6a9af52d51fa63c24c1848e40f3c299fe14c38d876d1e27eda499c5d5ef43c"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-504.jpg",
+        "sha256": "55a28da05fbc3945bfe5038077c0704ebc57ee31eab1add86f2b5fc585168e4a"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-505.jpg",
+        "sha256": "5f238505640fac218cadd22fcb9544c9d2bdf1907e371957979de937ae3c23b7"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-506.jpg",
+        "sha256": "c5aaf66b50825fcb762eb54a91c2afe421dcc55c73549682eeb626a25145965a"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-507.jpg",
+        "sha256": "04c4ce57004cda052d8378b617a1bc6e7a0b64bf9a2ac500729babe16f023c78"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-508.jpg",
+        "sha256": "6a7f3117392e77abb6a77b8a22b3f77318a3c4fb1f1826daadd4b3fe6c925d99"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-509.jpg",
+        "sha256": "03cea31c57e5fd9ef66f310a1a1d11eedccda5ba60a381eee04fb0cdedbb938d"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-510.jpg",
+        "sha256": "caada194457f8b320150b5f1856bd57b3749394edd78ddbd00e201441c9130af"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-511.jpg",
+        "sha256": "80290f74d4d7e212545fa05ba1070e63a1d1fd794718d1254f05a3c87aab2b6a"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-512.jpg",
+        "sha256": "3b4a319e818048987a4775c9424e4df67dd45003321710fd13864215bfa94dfd"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-513.jpg",
+        "sha256": "07ff5cdfca95ac8ad11ed1df6939d17bf7d150572a639213f128b459dee3af5c"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-514.jpg",
+        "sha256": "a5612e397bd7f1996db4c39e49c1d9b4d3e499f4d02b97e7798e01b97f76776f"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-515.jpg",
+        "sha256": "a1a808a806c59f1ae8b115533559d3beb8f82144396a2bddcd8ad9386608bdb3"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-516.jpg",
+        "sha256": "051860d80ddfae5882d8aa42e3090b212400592e6063453030b36a9787a6db88"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-517.jpg",
+        "sha256": "4f1c63b61c86dc4305d20fee951c2db45f54aa524a4c113e2ae11cf1d17cf221"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-518.jpg",
+        "sha256": "19ccc6c8428fccd24947af9285adbf3176c5bb3a9c597bf014b4728f3f8e08bb"
+      },
+      {
+        "name": "KWAJ_CORSAIR_230427-519.jpg",
+        "sha256": "68fe767d8a5b6e26ec1f7d0b75af77918e2eaa2a673e76549ab1836532db8357"
+      }
+    ],
+    "pycolmap": "4.2.1",
+    "max_features": 8192,
+    "camera_model": "SIMPLE_RADIAL",
+    "seed": 42
+  },
+  "seconds": 36.88644869400014,
+  "models": 1,
+  "scale": "arbitrary",
+  "status": "reconstructed",
+  "registered_images": 20,
+  "points_raw": 16893,
+  "points_filtered": 16045,
+  "mean_reprojection_px": 0.6742884091164023,
+  "median_point_error_px": 0.6026708416731521,
+  "p95_point_error_px": 1.4181904338914524,
+  "median_track_length": 4.0,
+  "verified_pairs": 153,
+  "cameras": [
+    {
+      "name": "KWAJ_CORSAIR_230427-503.jpg",
+      "center": [
+        -3.924385389272313,
+        0.37140362697671103,
+        -0.5818455320953843
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-500.jpg",
+      "center": [
+        -5.4889817348917305,
+        0.1369949138686135,
+        0.02542626377834023
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-502.jpg",
+      "center": [
+        -4.465315171900064,
+        0.3670984271043271,
+        -0.5560595805210462
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-501.jpg",
+      "center": [
+        -5.042244563371755,
+        0.3048713293630922,
+        -0.2786049183362792
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-505.jpg",
+      "center": [
+        -3.074649848659236,
+        0.06020299555179131,
+        0.05522090325488663
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-504.jpg",
+      "center": [
+        -3.4782033661115515,
+        0.2788018669413326,
+        -0.26628166880724197
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-506.jpg",
+      "center": [
+        -2.4115105139914736,
+        -0.022903157143290876,
+        0.13178287970223213
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-507.jpg",
+      "center": [
+        -1.6192057165904121,
+        0.06859800379995473,
+        -0.12306738230587101
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-508.jpg",
+      "center": [
+        -0.9135944684123891,
+        0.13184131139258895,
+        -0.35613482039513944
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-509.jpg",
+      "center": [
+        -0.22126027944417978,
+        0.17259459627974458,
+        -0.5769271249685215
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-510.jpg",
+      "center": [
+        0.49598853683406774,
+        0.1398268067252709,
+        -0.7133874922564192
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-511.jpg",
+      "center": [
+        1.0732440885315926,
+        0.05166146134935662,
+        -0.6608917904181189
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-514.jpg",
+      "center": [
+        2.8437608123167353,
+        -0.49247523415856137,
+        0.6762455173665148
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-515.jpg",
+      "center": [
+        3.4383310202069,
+        -0.4836094012258816,
+        0.804571489981912
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-513.jpg",
+      "center": [
+        2.341393365480724,
+        -0.3346427919864474,
+        0.3980917533122175
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-512.jpg",
+      "center": [
+        1.7245711889958695,
+        -0.07955576319579728,
+        -0.1908394425459179
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-516.jpg",
+      "center": [
+        4.002198039273824,
+        -0.34707542702659006,
+        0.7532447151313747
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-517.jpg",
+      "center": [
+        4.410241139460924,
+        -0.22266507293586033,
+        0.6309485360489572
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-519.jpg",
+      "center": [
+        5.3100905184277725,
+        -0.09480149416519314,
+        0.4365293227993149
+      ]
+    },
+    {
+      "name": "KWAJ_CORSAIR_230427-518.jpg",
+      "center": [
+        4.820641126652741,
+        -0.1272386046970119,
+        0.4831623689996821
+      ]
+    }
+  ],
+  "estimated_intrinsics": [
+    {
+      "model": "SIMPLE_RADIAL",
+      "params": [
+        600.6655005668451,
+        640.0,
+        360.0,
+        -0.01307190722346255
+      ]
+    }
+  ]
+}
