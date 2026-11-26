@@ -1,0 +1,78 @@
+{
+  "points": 143422,
+  "pairs": [
+    {
+      "pair": 0,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2005.jpg",
+        "WAPA_SA2_Tokai_230219-2006.jpg"
+      ],
+      "points": 0,
+      "status": "ok"
+    },
+    {
+      "pair": 2,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2007.jpg",
+        "WAPA_SA2_Tokai_230219-2008.jpg"
+      ],
+      "points": 749,
+      "status": "ok"
+    },
+    {
+      "pair": 4,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2009.jpg",
+        "WAPA_SA2_Tokai_230219-2010.jpg"
+      ],
+      "points": 38634,
+      "status": "ok"
+    },
+    {
+      "pair": 7,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2012.jpg",
+        "WAPA_SA2_Tokai_230219-2013.jpg"
+      ],
+      "points": 40258,
+      "status": "ok"
+    },
+    {
+      "pair": 9,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2014.jpg",
+        "WAPA_SA2_Tokai_230219-2015.jpg"
+      ],
+      "points": 18325,
+      "status": "ok"
+    },
+    {
+      "pair": 12,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2017.jpg",
+        "WAPA_SA2_Tokai_230219-2018.jpg"
+      ],
+      "points": 15848,
+      "status": "ok"
+    },
+    {
+      "pair": 14,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2019.jpg",
+        "WAPA_SA2_Tokai_230219-2020.jpg"
+      ],
+      "points": 21688,
+      "status": "ok"
+    },
+    {
+      "pair": 17,
+      "images": [
+        "WAPA_SA2_Tokai_230219-2022.jpg",
+        "WAPA_SA2_Tokai_230219-2023.jpg"
+      ],
+      "points": 7920,
+      "status": "ok"
+    }
+  ],
+  "note": "Pairwise stereo, arbitrary scale, estimated pinhole calibration; not multiview-fused or ground-truth validated."
+}

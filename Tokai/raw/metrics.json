@@ -1,0 +1,272 @@
+{
+  "scene": "Tokai",
+  "variant": "raw",
+  "input_images": 20,
+  "fingerprint": "5e5ed2d6ab121ca94d5d3209ab19b5fc64781a9830e9ccf615439873cf98bac2",
+  "config": {
+    "variant": "raw",
+    "inputs": [
+      {
+        "name": "WAPA_SA2_Tokai_230219-2005.jpg",
+        "sha256": "433e5fe6a19979d0ef0ec2dfc0d97a0934bcc26340d6689220b4bcd6a147becd"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2006.jpg",
+        "sha256": "ded1554938b31f54c8435f10adc572ce988689860f5a358247af3b08368b1392"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2007.jpg",
+        "sha256": "a7f143b197c7a84adc7476911432045aab4b4a6ee59ea60bfe8c3df936037546"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2008.jpg",
+        "sha256": "f71209ad366fadb3b76a8c141a5863798adf66f5d5e00da2ac9fbd34fc8bcab4"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2009.jpg",
+        "sha256": "6ad49a61688c219b69fbf777b14906ba5cc838371d0e6296e7af1a3eeec799e5"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2010.jpg",
+        "sha256": "ebe84a042dd5fc9cacfa37e638b5bf59cf6af9be07a83ed2ce361246013b8832"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2011.jpg",
+        "sha256": "307ed9ccfee77e7bc325e7a4e3dab06c75846fd271d7e86674242e65e7fe3d3e"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2012.jpg",
+        "sha256": "3f13e63da8b6282f93279e6a52cec54bf85a7b13d36acef3f9f786d40eb099a7"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2013.jpg",
+        "sha256": "b88f10ab5e669a138272c8e0427cf2026cf31901deba0419570fa23d01a5a9f9"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2014.jpg",
+        "sha256": "094469f232e84c7f6953e59784ae39c4bc63a7bcb7554d52dd639f970dcfb72b"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2015.jpg",
+        "sha256": "9ad5e6f6f34034c336451ec59ff6291e1544a53e21c5cdbaa6871ceca870a864"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2016.jpg",
+        "sha256": "d6963626a1c0ebd72a5e95c1195443805d228785c7312d7b2ed8db1b5d474000"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2017.jpg",
+        "sha256": "a5e6ec3c5b930419be7b64015c526754ed404846a5de467f7478490fad0a0cf3"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2018.jpg",
+        "sha256": "ef308fc76cf79afc6825c7124960cd7ecdfcc7775ff535797451f09593c140a5"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2019.jpg",
+        "sha256": "6735bc566de3439b68489062447ec046f7d3d304ef670f594a3cca782143fd79"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2020.jpg",
+        "sha256": "40688a1b2bf22e35f7a2c871b3d884f5d4c40615a26781e17250219bd989806c"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2021.jpg",
+        "sha256": "7a2157bdec55ba4a4f3197d6e4026582d20eeafd83d48153b35c87622cb61fd0"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2022.jpg",
+        "sha256": "9709416ac376083eb08e403e199c54fe900654fb48bf394ddc5091c5d5a30c91"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2023.jpg",
+        "sha256": "383f9c35ccd3914e24038d66d0aed61b6bc53102edff1a776424a4c2a3314d74"
+      },
+      {
+        "name": "WAPA_SA2_Tokai_230219-2026.jpg",
+        "sha256": "7275a664c1627329e6165d5341f33f05b4443a69214e01cbac940f5529fe2308"
+      }
+    ],
+    "pycolmap": "4.2.1",
+    "max_features": 8192,
+    "camera_model": "SIMPLE_RADIAL",
+    "seed": 42
+  },
+  "seconds": 25.604736093999236,
+  "models": 1,
+  "scale": "arbitrary",
+  "status": "reconstructed",
+  "registered_images": 19,
+  "points_raw": 9231,
+  "points_filtered": 7941,
+  "mean_reprojection_px": 0.9124087765676441,
+  "median_point_error_px": 0.8734120236465029,
+  "p95_point_error_px": 1.6975691769863854,
+  "median_track_length": 3.0,
+  "verified_pairs": 66,
+  "cameras": [
+    {
+      "name": "WAPA_SA2_Tokai_230219-2006.jpg",
+      "center": [
+        0.9216466356987437,
+        4.507217661556229,
+        -0.3480045989054963
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2005.jpg",
+      "center": [
+        0.8657167026180719,
+        4.756092242957561,
+        0.005348013107482064
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2007.jpg",
+      "center": [
+        1.019924990098301,
+        3.975521669036883,
+        -0.6748408186500132
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2008.jpg",
+      "center": [
+        1.2303935542295847,
+        3.483750935068316,
+        -0.8030646581485482
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2009.jpg",
+      "center": [
+        1.3618792709821368,
+        2.9668770151279764,
+        -0.6746246616873973
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2010.jpg",
+      "center": [
+        1.3800893670132253,
+        2.473905456880214,
+        -0.5552685612344177
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2011.jpg",
+      "center": [
+        1.398937106518043,
+        1.8126695667563593,
+        -0.8575102380251223
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2012.jpg",
+      "center": [
+        1.286839797226629,
+        1.193675120421397,
+        -0.857914067578622
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2014.jpg",
+      "center": [
+        0.9867567491727113,
+        -0.12567388038302352,
+        -0.7045651866374623
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2013.jpg",
+      "center": [
+        1.1658006073470402,
+        0.6101122717107604,
+        -0.8195674181985731
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2015.jpg",
+      "center": [
+        0.6881192055315829,
+        -0.919941660644439,
+        -0.5506882434708754
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2016.jpg",
+      "center": [
+        0.2970039544251377,
+        -1.6466115109540636,
+        -0.33666276111116583
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2017.jpg",
+      "center": [
+        -0.17810461348778972,
+        -2.1596335789429673,
+        0.0073527848798938256
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2018.jpg",
+      "center": [
+        -0.7502742986971275,
+        -2.7196236758169006,
+        0.37887596824300807
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2019.jpg",
+      "center": [
+        -1.4069597004929983,
+        -3.1195242637755953,
+        0.8188150410638868
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2020.jpg",
+      "center": [
+        -2.1686492720246404,
+        -3.4658247162607125,
+        1.2948675136157988
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2022.jpg",
+      "center": [
+        -3.746853816366437,
+        -3.56354664749892,
+        2.0711783869533638
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2021.jpg",
+      "center": [
+        -2.953329133274172,
+        -3.6346850753494286,
+        1.7483594382056373
+      ]
+    },
+    {
+      "name": "WAPA_SA2_Tokai_230219-2023.jpg",
+      "center": [
+        -4.526974300697493,
+        -3.3033497622815133,
+        2.67784907805103
+      ]
+    }
+  ],
+  "estimated_intrinsics": [
+    {
+      "model": "SIMPLE_RADIAL",
+      "params": [
+        565.461303777068,
+        640.0,
+        360.0,
+        -0.026226056458306606
+      ]
+    }
+  ]
+}
