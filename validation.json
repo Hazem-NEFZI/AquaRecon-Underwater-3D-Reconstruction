@@ -1,0 +1,73 @@
+{
+  "synthetic_geometry_tests": "passed: signed horizontal and vertical stereo, inverse pose transform",
+  "runs": [
+    {
+      "run": "Cormoran/clahe",
+      "observations_checked": 33654,
+      "observation_rmse_px": 1.1419480859262081,
+      "negative_depth_observations": 0,
+      "unregistered": [],
+      "status": "passed"
+    },
+    {
+      "run": "Cormoran/raw",
+      "observations_checked": 35589,
+      "observation_rmse_px": 1.101674741091636,
+      "negative_depth_observations": 0,
+      "unregistered": [],
+      "status": "passed"
+    },
+    {
+      "run": "Isro/clahe",
+      "observations_checked": 32371,
+      "observation_rmse_px": 1.1611646175218007,
+      "negative_depth_observations": 0,
+      "unregistered": [],
+      "status": "passed"
+    },
+    {
+      "run": "Isro/raw",
+      "observations_checked": 26987,
+      "observation_rmse_px": 1.1201849321442654,
+      "negative_depth_observations": 0,
+      "unregistered": [],
+      "status": "passed"
+    },
+    {
+      "run": "Kwaj/clahe",
+      "observations_checked": 72302,
+      "observation_rmse_px": 0.9035775606286597,
+      "negative_depth_observations": 0,
+      "unregistered": [],
+      "status": "passed"
+    },
+    {
+      "run": "Kwaj/raw",
+      "observations_checked": 74108,
+      "observation_rmse_px": 0.8880692794631639,
+      "negative_depth_observations": 0,
+      "unregistered": [],
+      "status": "passed"
+    },
+    {
+      "run": "Tokai/clahe",
+      "observations_checked": 31448,
+      "observation_rmse_px": 1.1013368255463245,
+      "negative_depth_observations": 0,
+      "unregistered": [
+        "WAPA_SA2_Tokai_230219-2026.jpg"
+      ],
+      "status": "passed"
+    },
+    {
+      "run": "Tokai/raw",
+      "observations_checked": 30129,
+      "observation_rmse_px": 1.112213317717302,
+      "negative_depth_observations": 0,
+      "unregistered": [
+        "WAPA_SA2_Tokai_230219-2026.jpg"
+      ],
+      "status": "passed"
+    }
+  ]
+}

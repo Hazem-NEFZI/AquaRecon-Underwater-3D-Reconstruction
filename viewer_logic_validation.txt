@@ -1,0 +1,1 @@
+PASS: 8 scene/variant switches, dense fallback, error colouring, camera toggle, reset and distance calculation. Plotly rendering not tested by this mock.

@@ -1,87 +1,198 @@
+<div align="center">
+
 # AquaRecon
-## Underwater multi-view reconstruction and inspection research
+### Underwater Stereo and Multi-View 3D Reconstruction of Shipwrecks
 
-**Hazem Nefzi — IMR, SIGMA Clermont**
+**Hazem NEFZI** · Innovative Mechanisms and Robots (IMR), SIGMA Clermont
 
-A working computer-vision portfolio project on **80 real shipwreck photographs**, comparing raw inputs with luminance-only contrast enhancement. Built on established COLMAP geometry, with a custom reproducible experiment pipeline, quality filtering, CPU stereo densification and an offline inspection interface.
+[![Live demo](https://img.shields.io/badge/Live%20demo-Open%20the%203D%20viewer-0A7EA4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hazem-nefzi.github.io/AquaRecon-Underwater-3D-Reconstruction/AquaRecon.html)
 
-### Open the result first
-1. Extract this ZIP fully.
-2. Double-click **AquaRecon.html**. Use Chrome, Edge or Firefox with WebGL enabled.
-3. Select a wreck, rotate the reconstruction and change the geometry to **Experimental dense stereo**. Dense results are provided for the raw-image runs only.
-4. Choose reprojection-error colouring for sparse points. Toggle camera positions or select two points to measure a separation in arbitrary reconstruction units.
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.11-5C3EE8?logo=opencv&logoColor=white)
+![COLMAP](https://img.shields.io/badge/COLMAP-PyCOLMAP%204.2-1F6FEB)
+![NumPy](https://img.shields.io/badge/NumPy-2.3-013243?logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-1.17-8CAAE6?logo=scipy&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-6.5-3F4F75?logo=plotly&logoColor=white)
+![License: MIT](https://img.shields.io/badge/Code-MIT-green)
+![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey)
 
-No Python installation, server or internet connection is required to inspect the saved demo. The HTML embeds its data and Plotly. Different reconstructions are independently oriented/scaled; this is not a registered before/after change-detection tool.
+<img src="reconstruction_preview.png" alt="AquaRecon 3D reconstruction preview" width="85%">
 
-### What was actually implemented
-- Audited all 80 input images and recorded SHA-256 identifiers.
-- Reconstructed each scene twice: original RGB vs CLAHE on luminance (clip limit 2, 8×8 tiles).
-- Shared SIMPLE_RADIAL camera per scene, initialized by COLMAP and refined with bundle adjustment. No calibration was provided in the ZIP.
-- SIFT with RootSIFT normalization, exhaustive feature matching, robust geometric verification, incremental SfM and bundle adjustment through PyCOLMAP.
-- Exported points with ≥3 observations and mean point reprojection error ≤2 pixels.
-- Added pairwise SGBM stereo using estimated poses, horizontal or vertical rectification, left-right consistency, texture and valid-image masks, positive depth and a sparse-depth envelope.
-- Produced interactive original/enhanced image comparisons, camera poses, error colouring, benchmark CSV, COLMAP models and PLY clouds.
+</div>
 
-**Contribution:** integration, experiment design, quality controls, evaluation and inspection interface. SIFT, COLMAP, SGBM and CLAHE are established methods, not new algorithms invented in this project.
+---
 
-### Reproduce on Windows
-Use Python 3.12 (64-bit). In PowerShell, open this extracted project folder:
+## Overview
 
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python -m pip install -r requirements.txt
-.\.venv\Scripts\python reconstruct.py --data "C:\path\to\Submerged3D" --out rerun_results
+AquaRecon reconstructs **real deep-sea shipwrecks in 3D** from **80 underwater photographs** (4 scenes × 20 images, 720p). It recovers camera poses and sparse 3D structure with **structure-from-motion and bundle adjustment**, densifies the geometry with **pairwise stereo matching**, and lets you inspect every result in an **interactive 3D viewer** that runs directly in the browser.
+
+The project also asks a practical question: **does contrast enhancement help underwater reconstruction?** Each scene is reconstructed twice, from the raw images and from CLAHE-enhanced images, and the results are compared with quantitative metrics.
+
+> **Scope.** AquaRecon targets the *visual survey stage* of underwater inspection: recover the visible structure, review the photographic evidence and spot missing observations. It is a reproducible research prototype, not a certified measurement tool.
+
+---
+
+## Key results
+
+| Scene | Input | Registered views | Filtered 3D points | Mean reprojection error |
+|---|---|:---:|---:|---:|
+| Cormoran | raw | 20/20 | 7,958 | 0.888 px |
+| Cormoran | CLAHE | 20/20 | 7,321 | 0.917 px |
+| Isro | raw | 20/20 | 6,375 | 0.897 px |
+| Isro | CLAHE | 20/20 | 7,344 | 0.925 px |
+| **Kwaj** | **raw** | **20/20** | **16,045** | **0.674 px** |
+| Kwaj | CLAHE | 20/20 | 15,904 | 0.695 px |
+| Tokai | raw | 19/20 | 7,941 | 0.912 px |
+| Tokai | CLAHE | 19/20 | 8,243 | 0.896 px |
+
+- **79 of 80 cameras registered** across the four wrecks (one Tokai image could not be registered in either variant).
+- **Sub-pixel accuracy:** every run has a mean reprojection error below 1 px; the best run (Kwaj, raw) reaches **0.674 px** with 16,045 filtered points.
+- **Enhancement is scene-dependent:** CLAHE increased the number of retained points on Isro and Tokai but decreased it on Cormoran and Kwaj. It is not assumed to help every scene.
+- **Dense stereo:** from 46,313 (Isro) to 177,191 (Kwaj) pairwise dense points before outlier filtering.
+
+Full results: [`results/benchmark.csv`](results/benchmark.csv) · [`results/validation.json`](results/validation.json) · [`EXPERIMENT_REPORT.md`](EXPERIMENT_REPORT.md)
+
+---
+
+## Example: stereo on the Kwaj wreck
+
+| Rectified stereo pair | Disparity map (SGBM) |
+|:---:|:---:|
+| <img src="results/Kwaj/raw/rectified.jpg" width="100%"> | <img src="results/Kwaj/raw/disparity.jpg" width="100%"> |
+
+The image pair is first **rectified** using the camera poses estimated by structure-from-motion, then matched with **OpenCV SGBM** to produce a disparity map, which is converted into 3D points.
+
+---
+
+## Pipeline
+
+```mermaid
+flowchart LR
+    A[80 underwater images] --> B[Image audit<br/>SHA-256 fingerprints]
+    B --> C{Input variant}
+    C -->|raw| D[SIFT + RootSIFT<br/>features]
+    C -->|CLAHE on luminance| D
+    D --> E[Exhaustive matching<br/>+ geometric verification]
+    E --> F[Incremental SfM<br/>+ bundle adjustment]
+    F --> G[Quality filtering<br/>≥ 3 views, ≤ 2 px error]
+    G --> H[Pairwise stereo rectification<br/>+ SGBM densification]
+    G --> I[Benchmark metrics<br/>CSV + validation]
+    H --> J[Interactive 3D viewer<br/>HTML + Plotly]
+    I --> J
 ```
 
-The data path must contain `Cormoran/input`, `Isro/input`, `Kwaj/input`, and `Tokai/input`. Use your original Submerged3D ZIP; full source photos are not duplicated in this package.
+1. **Image audit:** all 80 images are fingerprinted with SHA-256, so every run is traceable to its exact inputs.
+2. **Two input variants:** original RGB images and CLAHE applied to the luminance channel only (clip limit 2, 8×8 tiles).
+3. **Structure-from-motion (PyCOLMAP):** SIFT features with RootSIFT normalisation, exhaustive matching, robust geometric verification, incremental reconstruction and **bundle adjustment**, with one shared `SIMPLE_RADIAL` camera model per scene.
+4. **Quality filtering:** only 3D points seen in **at least 3 images** with a **mean reprojection error ≤ 2 px** are kept.
+5. **Dense stereo:** pairwise rectification (horizontal or vertical), **SGBM** matching, left-right consistency check, texture and validity masks, positive-depth check and a sparse-depth envelope to reject implausible points.
+6. **Validation:** synthetic geometry tests, plus an independent reprojection of every saved model (finite coordinates, no observation behind a camera).
+7. **Inspection viewer:** a single self-contained HTML file with camera poses, reprojection-error colouring, raw vs enhanced image comparison and point-to-point distance measurement.
 
-For one scene:
+---
 
-```powershell
-.\.venv\Scripts\python reconstruct.py --data "C:\path\to\Submerged3D" --out rerun_results --scenes Kwaj --variants raw
-.\.venv\Scripts\python densify.py --model rerun_results/Kwaj/raw --images "C:\path\to\Submerged3D\Kwaj\input"
+## Try the interactive viewer
+
+**[Open the live 3D viewer](https://hazem-nefzi.github.io/AquaRecon-Underwater-3D-Reconstruction/AquaRecon.html)** (Chrome, Edge or Firefox, with WebGL enabled), or download the repository and open `AquaRecon.html` locally. No installation or server is needed.
+
+- Select a wreck and rotate the reconstruction.
+- Switch the geometry to **Experimental dense stereo** (available for the raw-image runs).
+- Colour sparse points by **reprojection error**.
+- Show or hide **camera positions**.
+- Select two points to measure their separation (in arbitrary reconstruction units).
+
+---
+
+## Repository structure
+
+```
+AquaRecon/
+├── AquaRecon.html          # Self-contained interactive 3D viewer
+├── reconstruct.py          # Sparse reconstruction pipeline (raw vs CLAHE)
+├── densify.py              # Pairwise stereo rectification + SGBM densification
+├── validate.py             # Geometry tests and independent reprojection checks
+├── build_demo.py           # Builds the viewer from experiment folders
+├── export_clouds.py        # Exports dense clouds to PLY (CloudCompare, MeshLab)
+├── viewer_template.html    # Viewer template
+├── EXPERIMENT_REPORT.md    # Detailed experiment report
+├── requirements.txt
+└── results/
+    ├── benchmark.csv       # Metrics for all 8 runs
+    ├── validation.json     # Reprojection checks per run
+    └── <Scene>/<raw|clahe>/  # COLMAP models, PLY clouds, metrics, stereo examples
 ```
 
-The saved results folder excludes the large matching databases and enhanced source images. Use a new output directory to reproduce an experiment. Completed runs with the same input fingerprint are reused; incomplete runs are refused rather than silently mixed with new data. Four CPU threads are requested. The initial sparse experiments used OpenCV 5.1.0 for CLAHE, while dense stereo and the packaged dependency pin use OpenCV 4.11.0. Exact numerical reproduction across versions/platforms is not guaranteed. Runtime varies by hardware; no CUDA GPU is required. Tested here on Linux, Python 3.12; the PowerShell instructions have not been executed on Windows.
+---
 
-To build your own viewer, put completed experiment folders beneath a project directory's `results/`, copy `viewer_template.html` there, then run:
+## Reproduce the experiments
 
-```powershell
-.\.venv\Scripts\python build_demo.py --root . --data "C:\path\to\Submerged3D"
-.\.venv\Scripts\python validate.py
+Requirements: Python 3.12 (64-bit). No GPU is needed.
+
+```bash
+python -m venv .venv
+# Windows: .\.venv\Scripts\activate    Linux/macOS: source .venv/bin/activate
+pip install -r requirements.txt
+
+# Full benchmark (4 scenes × 2 variants)
+python reconstruct.py --data /path/to/Submerged3D --out rerun_results
+
+# One scene, raw images only, then dense stereo
+python reconstruct.py --data /path/to/Submerged3D --out rerun_results --scenes Kwaj --variants raw
+python densify.py --model rerun_results/Kwaj/raw --images /path/to/Submerged3D/Kwaj/input
+
+# Checks
+python validate.py
 ```
 
-### Read the results correctly
-`results/benchmark.csv` records all eight runs. Reprojection error measures **internal agreement with the same input observations**, not held-out prediction or physical accuracy. Registration rate reports completeness of estimated camera poses, not complete surface coverage. The viewer displays at most 45,000 sampled points per cloud to keep navigation responsive; complete compressed clouds remain available. Run `python export_clouds.py` to export the bundled dense arrays to PLY for CloudCompare or MeshLab. Sparse PLY files are included directly.
+The data folder must contain `Cormoran/input`, `Isro/input`, `Kwaj/input` and `Tokai/input`. Download Submerged3D from [Zenodo](https://zenodo.org/records/15482420); the source photos are not duplicated in this repository. Completed runs with the same input fingerprint are reused, and incomplete runs are refused rather than silently mixed with new data. Exact numerical results may vary slightly across platforms and library versions.
 
-The dense PLY files contain pairwise estimates before display-only statistical outlier filtering. The viewer removes points whose mean distance to eight neighbours exceeds the global mean plus two standard deviations. It retains holes rather than inventing surface geometry. The sparse-depth envelope rejects implausibly distant/near stereo points but is not a proof of correctness.
+---
 
-### Industrial relevance and honest limitations
-This project targets the **visual survey stage of underwater inspection**: recover visible structure, review photographic evidence and identify missing observations. It is not certified for defect sizing, crack/corrosion detection, structural assessment or autonomous navigation.
+## How to read the results
 
-- No metric scale, supplied underwater calibration, ground-truth geometry, IMU, depth sensor or surveyed targets are included.
-- Refraction at the housing/water interface is not explicitly modelled. A fitted radial camera is an approximation.
-- Untextured water, occlusions, illumination changes and sparse viewpoints cause holes and outliers.
-- Pairwise dense clouds are not multiview-fused, watertight meshes or Gaussian splats.
-- Shared intrinsics assume one fixed camera/lens setting per scene; this assumption needs independent confirmation for industrial use.
-- No cross-dataset generalization or state-of-the-art superiority is claimed.
+- **Reprojection error** measures how well the reconstruction agrees with the image observations it was fitted on. It is not a measure of physical accuracy against ground truth.
+- **Registration rate** measures how many camera poses were recovered, not how much of the surface is covered.
+- Each reconstruction has its **own arbitrary scale and orientation**, so scenes and variants are not directly superimposable.
+- Dense clouds are **pairwise estimates**, not a fused multi-view surface: they contain holes and some outliers, which the viewer filters for display only.
 
-**Next validation milestone:** underwater calibration plus known-length targets or a reference scan, then evaluate metric error and repeatability. Add multiview depth consistency and calibrated uncertainty before defect measurements. An image-enhancement step is retained only when supported by measurements; it is not assumed to improve every scene.
+---
 
-### Data and software attribution
-Submerged3D: Zhuodong Jiang and Nantheera Anantrasirichai, University of Bristol (2025), https://doi.org/10.5281/zenodo.15482420. Four scenes with 20 RGB 720p shipwreck images each. Related research: *RUSplatting: Robust 3D Gaussian Splatting for Sparse-View Underwater Scene Reconstruction*, BMVC 2025, https://theflash987.github.io/RUSplatting.page/ . This project does **not** implement RUSplatting.
+## Limitations and next steps
 
-The archive includes no license file. Check the dataset's current terms before publicly redistributing photographs or derived assets. This private package includes small representative previews and derived results for your supplied data. Dataset ownership remains with its creators.
+**Current limitations**
+- No metric scale: no calibration targets, ground-truth geometry, IMU or depth sensor are available in the dataset.
+- Refraction at the housing/water interface is not explicitly modelled; the fitted radial camera model is an approximation.
+- Turbidity, untextured water, occlusions and lighting changes create holes and outliers.
+- Dense results are pairwise, not fused into a watertight mesh.
 
-- COLMAP/PyCOLMAP: https://colmap.github.io/pycolmap/index.html
-- OpenCV calibration and stereo: https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html
-- Plotly: https://plotly.com/python/
+**Next steps**
+- Underwater calibration with a **refraction-aware camera model**.
+- **Metric scale** from known-length targets, a depth sensor or a reference scan, then evaluation of metric error and repeatability.
+- **Fusion with inertial and pressure data (IMU, depth sensor)** for real-time pose estimation and drift reduction.
+- Multi-view depth fusion and calibrated uncertainty estimation.
 
-### CV wording after you have run and understood the project
-**AquaRecon — Reconstruction 3D sous-marine (projet personnel)**  
-Développement d'un pipeline Python de reconstruction multi-vues sur 80 images réelles d'épaves : estimation des poses, ajustement de faisceaux, filtrage géométrique et visualisation 3D interactive. Comparaison des images brutes et rehaussées sur quatre scènes, avec analyse des erreurs de reprojection et des limites de reconstruction.
+---
 
-**Technologies:** Python, OpenCV, COLMAP/PyCOLMAP, NumPy, SciPy, Plotly, géométrie multi-vues.
+## My contribution
 
-### Validation scope for the interface
-Viewer scene selection, dense-to-sparse fallback, error-colour configuration, camera toggle, reset and distance calculation passed a JavaScript logic test. The local headless Chromium process crashed while loading the page, so end-to-end WebGL rendering could not be verified here. The static reconstruction preview was generated directly from the computed point clouds and visually inspected. Please open the HTML in a current desktop browser with WebGL enabled.
+I designed and integrated the full experiment: input auditing, the raw vs CLAHE protocol, quality filtering, stereo densification, validation checks, metrics and the inspection viewer. SIFT, COLMAP, SGBM and CLAHE are established methods used as building blocks; no new algorithm is claimed.
+
+---
+
+## Data and acknowledgements
+
+- **Dataset:** Submerged3D, Zhuodong Jiang and Nantheera Anantrasirichai, University of Bristol (2025). DOI: [10.5281/zenodo.15482420](https://doi.org/10.5281/zenodo.15482420). Licensed under **CC BY 4.0**. Four deep-sea shipwreck scenes (SMS Cormoran, Tokai Maru, the Kwajalein F4U-1 Corsair and SS America), 20 RGB 720p images each.
+- **Related research:** *RUSplatting: Robust 3D Gaussian Splatting for Sparse-View Underwater Scene Reconstruction*, BMVC 2025 ([project page](https://theflash987.github.io/RUSplatting.page/)). This project does not implement RUSplatting.
+- **Software:** [COLMAP / PyCOLMAP](https://colmap.github.io/pycolmap/index.html), [OpenCV](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html), [Plotly](https://plotly.com/python/).
+
+## License
+
+The code is released under the **MIT License** (see [`LICENSE`](LICENSE)). The Submerged3D images and the results derived from them remain under **CC BY 4.0**, with credit to their creators.
+
+---
+
+<div align="center">
+
+**Hazem NEFZI** · [Portfolio](https://precious-hummingbird-e040f8.netlify.app) · [LinkedIn](https://www.linkedin.com/in/hazem-nefzi-65462a257)
+
+</div>
