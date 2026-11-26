@@ -1,0 +1,280 @@
+{
+  "scene": "Cormoran",
+  "variant": "raw",
+  "input_images": 20,
+  "fingerprint": "34981d1bd7994907bb5a3c3c101a610ca414adfdac95e7bbdf17cccf06510186",
+  "config": {
+    "variant": "raw",
+    "inputs": [
+      {
+        "name": "WAPA_SA1_Comoron_230217-3348.jpg",
+        "sha256": "98c3e8aefc13c9b51b0ef0ad3c6443bad54455a6f444741af82313587a43f5e7"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3349.jpg",
+        "sha256": "2f2f7c09ceb974f7b292773349e323fde7306818abfbbe79f3b410096adc0496"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3350.jpg",
+        "sha256": "50957320c3eeafd809138721a69026889842010ac82aff4b335eca0a26a21fcd"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3351.jpg",
+        "sha256": "28f6d66f381b05601d79114d32336454cd15e4338f913997bca4f18997a0daa4"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3352.jpg",
+        "sha256": "2d38b4db5e4b0cb997cf411dafbe0a3fda3532faef9bd332b40af6d422808dbf"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3353.jpg",
+        "sha256": "ec0ef324dd7dfd9817c92675bac8311bb3f9562dd1431ccdf1e88f6f7ff8c381"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3354.jpg",
+        "sha256": "58b1f787d5c5daeb12a4244d77b5b7b8c07a749fcbc7224cfb396081e22963eb"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3355.jpg",
+        "sha256": "641285f793cb387237fce3d4a51c3014e36ed2b776828413e31e3e5ab9ddd1ab"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3356.jpg",
+        "sha256": "e606794c24b26e4686ed18ae3d6fb2d5643e9221f39700fdf62f4e9cb86a1d04"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3357.jpg",
+        "sha256": "02f5b2809f064d636d30fe56ae9dbdd1b65b6066c6ee448e53fea0debebcb40f"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3358.jpg",
+        "sha256": "8b2c3089eb39bf25662adf09193df1e7382dfe7fb571a4b97fd5e4d2a4f2aeae"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3359.jpg",
+        "sha256": "d7bc3092c61b2f7a30071ee47eacb699d59512b016d5272555ffe2b8f29560a7"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3360.jpg",
+        "sha256": "e0728cba4b9becc2249cdccf93817159174250b89d5b4f800a7eaca94f362175"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3361.jpg",
+        "sha256": "3463ccefe1255bab02c1eed8006f279201f94e55efad1e355026ea8159997431"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3362.jpg",
+        "sha256": "a7f47da16efa2972705d4c555d187f837b23c5087954478b0a011be128e1a8d4"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3363.jpg",
+        "sha256": "c2e3aefa358ba03e6be83a4ffa4e449c262111a935d7cfe4c3092731dc03e514"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3364.jpg",
+        "sha256": "ddf1b0f5a2d5203356b09a5acae31a94b50b853d68f4e25ff37add36c825cfe9"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3365.jpg",
+        "sha256": "313ecc3b043e4d3321744155de9a2f5bfabc3d314114a513017264ae2ceb722a"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3366.jpg",
+        "sha256": "7b4d8e020e7db3528a5fe3884be7a1579673cdb2332d87cef50605db63dc9256"
+      },
+      {
+        "name": "WAPA_SA1_Comoron_230217-3367.jpg",
+        "sha256": "a03a39a70c7774497a17af6c74708968e28ff964e133a6b445048a2d7b36bbc0"
+      }
+    ],
+    "pycolmap": "4.2.1",
+    "max_features": 8192,
+    "camera_model": "SIMPLE_RADIAL",
+    "seed": 42
+  },
+  "seconds": 31.236438628000542,
+  "models": 1,
+  "scale": "arbitrary",
+  "status": "reconstructed",
+  "registered_images": 20,
+  "points_raw": 10269,
+  "points_filtered": 7958,
+  "mean_reprojection_px": 0.8876876341440981,
+  "median_point_error_px": 0.8520449411564431,
+  "p95_point_error_px": 1.6801506842492433,
+  "median_track_length": 3.0,
+  "verified_pairs": 106,
+  "cameras": [
+    {
+      "name": "WAPA_SA1_Comoron_230217-3348.jpg",
+      "center": [
+        1.4146667545375364,
+        4.91180414391733,
+        0.25929489957003304
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3350.jpg",
+      "center": [
+        0.8836285609139889,
+        4.132236883267466,
+        -0.12816609529595158
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3351.jpg",
+      "center": [
+        0.946975496060315,
+        3.6698837034250404,
+        -0.3342886750953331
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3349.jpg",
+      "center": [
+        1.203358642421271,
+        4.562591645418608,
+        0.11532680274336471
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3353.jpg",
+      "center": [
+        0.7166865908567132,
+        2.6531238889674964,
+        -0.5352891607600455
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3352.jpg",
+      "center": [
+        0.9283505475501002,
+        3.2391249158059234,
+        -0.5537360591739782
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3354.jpg",
+      "center": [
+        0.38541436880903324,
+        2.0305428368081837,
+        -0.5006722136316618
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3355.jpg",
+      "center": [
+        0.09669615507940102,
+        1.4935632961710752,
+        -0.21306306615374293
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3357.jpg",
+      "center": [
+        0.23355186832728408,
+        0.4924571273442443,
+        -0.3487542191593322
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3356.jpg",
+      "center": [
+        0.2923873810582877,
+        0.8950054230207752,
+        -0.347504608471513
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3359.jpg",
+      "center": [
+        -0.44528228685892585,
+        -0.6477073992705604,
+        0.09180755901462868
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3358.jpg",
+      "center": [
+        -0.23418556956068762,
+        -0.060083608753753674,
+        -0.13885167762914044
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3360.jpg",
+      "center": [
+        -0.6142209906560206,
+        -1.2288064695881977,
+        0.21286391958472584
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3361.jpg",
+      "center": [
+        -0.7640555239950848,
+        -1.8385876336672298,
+        0.17603291869957213
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3362.jpg",
+      "center": [
+        -0.4157600129867307,
+        -2.6229764477107893,
+        0.13576725835531506
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3363.jpg",
+      "center": [
+        -0.2505906224935878,
+        -3.396864199227208,
+        0.23359417976444372
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3364.jpg",
+      "center": [
+        -0.5905592464148164,
+        -3.8675357337469856,
+        0.34870124878103737
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3365.jpg",
+      "center": [
+        -1.0251762731379614,
+        -4.455474179304938,
+        0.46775155984525085
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3367.jpg",
+      "center": [
+        -1.6472324881941345,
+        -5.754248723407012,
+        0.5903930086012837
+      ]
+    },
+    {
+      "name": "WAPA_SA1_Comoron_230217-3366.jpg",
+      "center": [
+        -1.3472190849725787,
+        -5.050494048959152,
+        0.5054493698383484
+      ]
+    }
+  ],
+  "estimated_intrinsics": [
+    {
+      "model": "SIMPLE_RADIAL",
+      "params": [
+        505.9497711605526,
+        640.0,
+        360.0,
+        -0.05701178533792815
+      ]
+    }
+  ]
+}

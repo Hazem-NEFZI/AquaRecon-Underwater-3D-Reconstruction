@@ -1,0 +1,78 @@
+{
+  "points": 87389,
+  "pairs": [
+    {
+      "pair": 0,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3348.jpg",
+        "WAPA_SA1_Comoron_230217-3349.jpg"
+      ],
+      "points": 28591,
+      "status": "ok"
+    },
+    {
+      "pair": 2,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3350.jpg",
+        "WAPA_SA1_Comoron_230217-3351.jpg"
+      ],
+      "points": 3323,
+      "status": "ok"
+    },
+    {
+      "pair": 5,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3353.jpg",
+        "WAPA_SA1_Comoron_230217-3354.jpg"
+      ],
+      "points": 6050,
+      "status": "ok"
+    },
+    {
+      "pair": 7,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3355.jpg",
+        "WAPA_SA1_Comoron_230217-3356.jpg"
+      ],
+      "points": 269,
+      "status": "ok"
+    },
+    {
+      "pair": 10,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3358.jpg",
+        "WAPA_SA1_Comoron_230217-3359.jpg"
+      ],
+      "points": 25478,
+      "status": "ok"
+    },
+    {
+      "pair": 12,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3360.jpg",
+        "WAPA_SA1_Comoron_230217-3361.jpg"
+      ],
+      "points": 8267,
+      "status": "ok"
+    },
+    {
+      "pair": 15,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3363.jpg",
+        "WAPA_SA1_Comoron_230217-3364.jpg"
+      ],
+      "points": 0,
+      "status": "ok"
+    },
+    {
+      "pair": 18,
+      "images": [
+        "WAPA_SA1_Comoron_230217-3366.jpg",
+        "WAPA_SA1_Comoron_230217-3367.jpg"
+      ],
+      "points": 15411,
+      "status": "ok"
+    }
+  ],
+  "note": "Pairwise stereo, arbitrary scale, estimated pinhole calibration; not multiview-fused or ground-truth validated."
+}
