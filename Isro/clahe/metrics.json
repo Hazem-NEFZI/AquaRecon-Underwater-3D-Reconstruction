@@ -1,0 +1,280 @@
+{
+  "scene": "Isro",
+  "variant": "clahe",
+  "input_images": 20,
+  "fingerprint": "7afb8a653bfd6e05b8a2071c3b3518737b736424c0a72d6e8ecabefc8cc88fc6",
+  "config": {
+    "variant": "clahe",
+    "inputs": [
+      {
+        "name": "ISRO_SA1_America_220529-2618.jpg",
+        "sha256": "90272eb9580f3c69311f0d797964505f1f74e5eb3bf762593bc7cbbe33234821"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2619.jpg",
+        "sha256": "7602728a05c7703c35d4941d71c2d91a5360aeb5ad415b6bc1e83c54d8fce0e0"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2620.jpg",
+        "sha256": "de3b722ce7e95018b7fef4f0f631246bb72120101b6cc10bd650e15a82d929b8"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2621.jpg",
+        "sha256": "1e9d9a9c7418e590358b39d00bf292ce75345ed2576ec6f5ba551b0a8b7488d0"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2622.jpg",
+        "sha256": "5fa1b61d9385b729ce69917bffd70c6f65c45815a6b3ce4024f9a3da7047a90e"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2623.jpg",
+        "sha256": "52552fe8917c55659635e771c75bad7477fc939d87e020ef399428fdeca820dc"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2624.jpg",
+        "sha256": "416ff639c134a3975c84cc1c0d656312c5bacdc13866754e9ed7bd91071f36f1"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2625.jpg",
+        "sha256": "2e80160a15a2ee494667e42c816fee4fb59a906c14f0109e070c823e17d48f7a"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2626.jpg",
+        "sha256": "5f11715a4789b9e9f68f46c4fe2ca7263896cb2f936d86e81cf85b39efdc9648"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2627.jpg",
+        "sha256": "4b3283b1e0c96dde45350b5618f70c9f17052fbd57f6e35dee1e0362de062ddd"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2628.jpg",
+        "sha256": "159f3d000de75c635a8d0bd41ed478d9a8c3a8b6ec2dc2ca42e51ccea1a9b607"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2629.jpg",
+        "sha256": "ce2cd99da0285c095e874edb97bce65c51dd16dbfe5a9d2a0faebc52472fb7e9"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2630.jpg",
+        "sha256": "bee3cbbde7e9b777b2f258b0d8ff593a3c9c6b7a8ac6faab3e861e1864554b98"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2631.jpg",
+        "sha256": "3b6161537de55b5b7bd34432a9a5f8e69fe07bf73fabc54660bf62106616df32"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2632.jpg",
+        "sha256": "1b5f663167d5f9cc90b04cfb51b77dc3ae768279ec530e00ee2572996d476332"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2633.jpg",
+        "sha256": "60781c23f3183d1956b23a3f4e56be21c4c328901892d60376b882b3de29efd4"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2634.jpg",
+        "sha256": "3baf78e72eb5b38817ab0a9fa3574af9ac775fe5cc220f00dd6267132f0a15fc"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2635.jpg",
+        "sha256": "e13074db5ffad07d50bcafada54390afb7615c53ea8ca0339a6bb31df37a486f"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2636.jpg",
+        "sha256": "203502b1f38a68f31beb6ac065da5b26c2ab9813484a6454878eec384dc198eb"
+      },
+      {
+        "name": "ISRO_SA1_America_220529-2637.jpg",
+        "sha256": "698bbfc3dc0381abb9dcaf17fcd8af019c35f9cd7f5f1dc0ca65477e5ebc58ae"
+      }
+    ],
+    "pycolmap": "4.2.1",
+    "max_features": 8192,
+    "camera_model": "SIMPLE_RADIAL",
+    "seed": 42
+  },
+  "seconds": 23.675947076999364,
+  "models": 1,
+  "scale": "arbitrary",
+  "status": "reconstructed",
+  "registered_images": 20,
+  "points_raw": 8734,
+  "points_filtered": 7344,
+  "mean_reprojection_px": 0.9252303040979248,
+  "median_point_error_px": 0.8943107809675388,
+  "p95_point_error_px": 1.760224648563001,
+  "median_track_length": 3.0,
+  "verified_pairs": 141,
+  "cameras": [
+    {
+      "name": "ISRO_SA1_America_220529-2620.png",
+      "center": [
+        -0.3524724726749824,
+        -2.511059192781753,
+        3.7908378494656234
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2621.png",
+      "center": [
+        -0.8409971851333813,
+        -2.233908008225989,
+        2.866178168618831
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2618.png",
+      "center": [
+        -0.23663978975678024,
+        -3.2618944701191346,
+        3.9884299468702116
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2619.png",
+      "center": [
+        -0.47137494089136567,
+        -2.8301564332605467,
+        3.8072254404350105
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2625.png",
+      "center": [
+        -1.9162514795537189,
+        -0.5485119989542584,
+        0.40834669276581087
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2624.png",
+      "center": [
+        -1.5956213551420753,
+        -1.0532641714514042,
+        0.820291080096702
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2622.png",
+      "center": [
+        -1.6744191243907824,
+        -2.1808954715689604,
+        2.0386091548922467
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2623.png",
+      "center": [
+        -1.6346848482454546,
+        -1.708542461699936,
+        1.2327127335449815
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2626.png",
+      "center": [
+        -1.997377665020128,
+        0.07375482442603076,
+        -0.10740380397558086
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2627.png",
+      "center": [
+        -1.6875914119939532,
+        0.6363165117900025,
+        -0.5945992087879876
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2628.png",
+      "center": [
+        -1.2630543125994262,
+        1.0750212008016735,
+        -0.6908103519008617
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2629.png",
+      "center": [
+        -0.8484238798920468,
+        1.391542330817169,
+        -0.9631402752119596
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2630.png",
+      "center": [
+        -0.3896171523324134,
+        1.6155468928173693,
+        -1.140666754123465
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2631.png",
+      "center": [
+        0.002238632877050662,
+        1.83303064088561,
+        -1.3712254894104539
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2632.png",
+      "center": [
+        0.49801148698921177,
+        1.859566863959554,
+        -1.6422528914698344
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2633.png",
+      "center": [
+        1.619008964757864,
+        1.648835806982676,
+        -2.0563583216196446
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2634.png",
+      "center": [
+        2.712684193376167,
+        1.347968398976837,
+        -2.0079552642653047
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2635.png",
+      "center": [
+        3.728648380487957,
+        1.2014883018647622,
+        -1.9534730056342837
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2637.png",
+      "center": [
+        4.877386445306126,
+        1.071744910723436,
+        -3.0393926748740547
+      ]
+    },
+    {
+      "name": "ISRO_SA1_America_220529-2636.png",
+      "center": [
+        4.350556294118133,
+        1.1710879178572786,
+        -2.4363157534198243
+      ]
+    }
+  ],
+  "estimated_intrinsics": [
+    {
+      "model": "SIMPLE_RADIAL",
+      "params": [
+        581.4326559030084,
+        640.0,
+        360.0,
+        -0.042826473851441
+      ]
+    }
+  ]
+}

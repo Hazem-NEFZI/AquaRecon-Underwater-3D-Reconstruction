@@ -1,0 +1,78 @@
+{
+  "points": 46313,
+  "pairs": [
+    {
+      "pair": 0,
+      "images": [
+        "ISRO_SA1_America_220529-2618.jpg",
+        "ISRO_SA1_America_220529-2619.jpg"
+      ],
+      "points": 19814,
+      "status": "ok"
+    },
+    {
+      "pair": 2,
+      "images": [
+        "ISRO_SA1_America_220529-2620.jpg",
+        "ISRO_SA1_America_220529-2621.jpg"
+      ],
+      "points": 92,
+      "status": "ok"
+    },
+    {
+      "pair": 5,
+      "images": [
+        "ISRO_SA1_America_220529-2623.jpg",
+        "ISRO_SA1_America_220529-2624.jpg"
+      ],
+      "points": 15557,
+      "status": "ok"
+    },
+    {
+      "pair": 7,
+      "images": [
+        "ISRO_SA1_America_220529-2625.jpg",
+        "ISRO_SA1_America_220529-2626.jpg"
+      ],
+      "points": 0,
+      "status": "ok"
+    },
+    {
+      "pair": 10,
+      "images": [
+        "ISRO_SA1_America_220529-2628.jpg",
+        "ISRO_SA1_America_220529-2629.jpg"
+      ],
+      "points": 900,
+      "status": "ok"
+    },
+    {
+      "pair": 12,
+      "images": [
+        "ISRO_SA1_America_220529-2630.jpg",
+        "ISRO_SA1_America_220529-2631.jpg"
+      ],
+      "points": 5,
+      "status": "ok"
+    },
+    {
+      "pair": 15,
+      "images": [
+        "ISRO_SA1_America_220529-2633.jpg",
+        "ISRO_SA1_America_220529-2634.jpg"
+      ],
+      "points": 9944,
+      "status": "ok"
+    },
+    {
+      "pair": 18,
+      "images": [
+        "ISRO_SA1_America_220529-2636.jpg",
+        "ISRO_SA1_America_220529-2637.jpg"
+      ],
+      "points": 1,
+      "status": "ok"
+    }
+  ],
+  "note": "Pairwise stereo, arbitrary scale, estimated pinhole calibration; not multiview-fused or ground-truth validated."
+}
